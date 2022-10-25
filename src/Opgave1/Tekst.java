@@ -1,3 +1,5 @@
+package Opgave1;
+
 import java.util.ArrayList;
 
 public class Tekst {

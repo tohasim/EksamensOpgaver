@@ -1,5 +1,5 @@
-import java.io.CharArrayWriter;
-import java.util.ArrayList;
+package Opgave2;
+
 import java.util.Arrays;
 import java.util.Random;
 
