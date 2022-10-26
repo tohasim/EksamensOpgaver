@@ -18,8 +18,7 @@ public class Bil {
     }
 
     public int totalVægt(){
-        int totalVægt =  this.tilkobletTrailer != null ? tilkobletTrailer.getVægt() + VÆGT : VÆGT;
-        return totalVægt;
+        return this.tilkobletTrailer != null ? tilkobletTrailer.getVægt() + VÆGT : VÆGT;
     }
 
     @Override
