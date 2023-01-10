@@ -27,20 +27,9 @@ public class Card {
         System.out.println(FiveOfClubs.Beats(FiveOfHearts));
     }
 
-    private int translateSuit(Suit suit){
-        int returnValue = 0;
-        switch (suit){
-            case spades -> returnValue = 4;
-            case hearts -> returnValue = 3;
-            case diamonds -> returnValue = 2;
-            case clubs -> returnValue = 1;
-        }
-        return returnValue;
-    }
-
     private boolean Beats(Card cardToBeat) {
         if (this.value == cardToBeat.value){
-            return this.translateSuit(suit) > this.translateSuit(cardToBeat.suit);
+            return this.suit.number > cardToBeat.suit.number;
         }
         else
             return this.value > cardToBeat.value;
