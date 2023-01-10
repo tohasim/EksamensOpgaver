@@ -1,3 +1,5 @@
+package Opgave3;
+
 public class Film {
     private int udgivelsesÅr;
     private String titel;
