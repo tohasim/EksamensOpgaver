@@ -7,7 +7,7 @@ public class User {
     private String fullName;
     private String userID;
 
-    public User(String fullName, String userID) {
+    public User(String fullName) {
         this.fullName = fullName;
         createUserID();
     }
@@ -33,7 +33,7 @@ public class User {
     }
 
     public static void main(String[] args) {
-        User testUser = new User("Tore Hald Simonsen", "tosi1234");
+        User testUser = new User("Tore Hald Simonsen");
         System.out.println(testUser.validUserID());
     }
 }

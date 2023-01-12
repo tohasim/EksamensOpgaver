@@ -1,5 +1,7 @@
 package Opgave20;
 
+import java.util.Random;
+
 public class User implements DataObject{
     private int id;
     private String name;
@@ -8,7 +10,11 @@ public class User implements DataObject{
     public User(int id, String name, String userName) {
         this.id = id;
         this.name = name;
-        this.userName = userName;
+    }
+
+    public String getUserName() {
+        Random random = new Random();
+        return name + String.format("%04d", random.nextInt(9999));
     }
 
     public int getId(){
@@ -16,6 +22,6 @@ public class User implements DataObject{
     }
 
     public String[] getData() {
-        return new String[]{"" + id, name, userName};
+        return new String[]{"" + id, name, getUserName()};
     }
 }

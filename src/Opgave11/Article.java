@@ -16,7 +16,7 @@ public class Article {
     }
 
     public String getLongestWord(){
-        body = body.replaceAll("[^\\w]", " ");
+        body = body.replaceAll("\\W", " ");
         String[] bodyArray = body.split(" ");
         String longestWord = bodyArray[0];
         for (String word : bodyArray) {
@@ -28,7 +28,7 @@ public class Article {
 
     public ArrayList<String> getWords(){
         ArrayList<String> listOfWords = new ArrayList<>();
-        body = body.replaceAll("[^\\w]", " ");
+        body = body.replaceAll("\\W", " ");
         String[] bodyArray = body.split(" ");
         for (String word : bodyArray) {
             if (!listOfWords.contains(word))
